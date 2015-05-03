@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Reactor Designer</title>
+        <link rel="stylesheet" href="js/jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="js/jqueryui/jquery-ui.theme.css">
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jqueryui/jquery-ui.js"></script>
+
+        <script src="js/spm.js"></script>
+        <script>
+            $(function() {
+
+                var app = spm();
+
+                app.make();
+
+            });
+
+
+        </script>
+    </head>
+    <body>
+
+        <div id="reactor_ctrl_dialog" title="Reactor Controls">
+            <p class="ui-state-default ui-corner-all" style="padding:4px; text-align:center;">
+                Reactor Output
+            </p>
+
+            <table style="width:100%; ">
+                <tr><td style="width:50%; text-align:right;">Fusion Power: </td><td><span id="total_power"></span></td></tr>
+                <tr><td style="width:50%; text-align:right;">Loss Power: </td><td><span id="total_loss"></span></td></tr>
+                <tr><td style="width:50%; text-align:right;">Fusion/Loss: </td><td><span id="Q"></span></td></tr>
+                <tr><td style="width:50%; text-align:right;">Electric Power: </td><td><span id="net_power"></span></td></tr>
+                <tr><td style="width:50%; text-align:right;">Neutron Fraction: </td><td><span id="neutron_frac"></span></td></tr>
+                <tr><td style="width:50%; text-align:right;">Charged Fraction: </td><td><span id="charged_frac"></span></td></tr>
+            </table>
+
+
+            <p class="ui-state-default ui-corner-all" style="padding:4px; text-align:center;">
+                Reactor Parameters
+            </p>
+
+            <table style="width:100%; text-align:center;">
+                <tr><td style="width:50%; text-align:right;">Plasma Temerature (keV): </td><td><div id="Te"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Electron Density (m-3): </td><td><div id="ne"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Tritium Fraction: </td><td><div id="T_frac"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Helium-3 Fraction: </td><td><div id="He3_frac"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Radius (m): </td><td><div id="radius"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Effective Plugging Voltage (kV): </td><td><div id="voltage"></div></td></tr>
+                <tr><td style="width:50%; text-align:right;">Required Magnetic Field: </td><td><span id="B"></span></td></tr>
+            </table>
+
+
+        </div>
+
+
+    </body>
+</html>
